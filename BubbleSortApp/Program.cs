@@ -1,35 +1,27 @@
-﻿internal class Program
+﻿using BubbleSortApp;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        int counter = 1;
-        List<int> unsortedList = new List<int>{ 1, 2, 5, 3, 1, 7, 9, 1, 12, 83, 1, 5, 3, 2 };
-        if (unsortedList.Count != 0 || unsortedList != null)
-        {
-            while (counter != unsortedList.Count - 1)
-            {
-                counter = 1;
-                for (int i = 1; i < unsortedList.Count; i++)
-                {
-                    if (unsortedList[i - 1] > unsortedList[i])
-                    {
-                        int changer = unsortedList[i];
-                        unsortedList[i] = unsortedList[i - 1];
-                        unsortedList[i - 1] = changer;
-                    }
-                    else
-                    {
-                        counter++;
-                    }
+        List<int> unsortedList1 = new List<int> { };
+        List<int> unsortedList2 = new List<int> { 1, 2, 5, 3, 1, 7, 9, 1, 12, 83, 1, 5, 3, 2 };
+        List<int> unsortedList3 = new List<int> { 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1 };
+        List<int> unsortedList4 = new List<int> { 2, 2, 2, 2 };
+        List<int> unsortedList5 = new List<int> { 1, 2 };
+        List<int> unsortedList6 = new List<int> { 2, 1 };
 
-                }
-            }
-            Console.WriteLine("Sortpwanie zakończone, wynik sortowania: ");
-            foreach (int i in unsortedList)
-            {
-                Console.Write(" " + i + ",");
-            }
-        }
+        BubbleMethod.bubbleMethod(unsortedList1);
+        
+        BubbleMethod.bubbleMethod(unsortedList2);
+        
+        BubbleMethod.bubbleMethod(unsortedList3);
+        
+        BubbleMethod.bubbleMethod(unsortedList4);
+        
+        BubbleMethod.bubbleMethod(unsortedList5);
+        
+        BubbleMethod.bubbleMethod(unsortedList6);
         
         
     }
